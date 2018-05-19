@@ -20,16 +20,16 @@
 		int id=Integer.parseInt(request.getParameter("id"));
 		Item single=(Item)goodslist.get(id);
 		myCart.addItem(single);
-		response.sendRedirect("show.jsp");
+		response.sendRedirect("shop.jsp");
 	}else if(action.equals("remove")){
 		String name=request.getParameter("name");
 		myCart.removeItem(name);
-		response.sendRedirect("shopcar.jsp");
+		response.sendRedirect("shopcart.jsp");
 	}else if(action.equals("clear")){
 		myCart.clearCart();
 		response.sendRedirect("shopcart.jsp");
 	}else{
-		response.sendRedirect("show.jsp");
+		response.sendRedirect("shop.jsp");
 	}
 %>
 
